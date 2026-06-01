@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/../public/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+
+@theme {
+  --color-stage-black: #000000;
+  --color-stage-gray: #1a1a1a;
+  --color-stage-red: #ef4444;
+  --color-stage-yellow: #facc15;
+  --font-digital: "Digital-7", monospace;
+  --font-timer: "MyCustomFont", sans-serif;
+}
+
+body {
+  @apply bg-stage-black text-white antialiased overflow-hidden;
+}
+
+@utility animate-blink {
+  animation: blink 0.3s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
